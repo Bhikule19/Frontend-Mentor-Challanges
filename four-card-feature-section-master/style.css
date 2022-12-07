@@ -52,6 +52,7 @@ header p {
   justify-content: center;
   max-width: 1440px;
   margin: 0 auto;
+  margin-bottom: 2rem;
 }
 
 .container .box {
