@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+:root {
+  --primary-red: hsl(0, 78%, 62%);
+  --primary-cyan: hsl(180, 62%, 55%);
+  --primary-orange: hsl(34, 97%, 64%);
+  --primary-blue: hsl(212, 86%, 64%);
+
+  --neutral-blue: hsl(234, 12%, 34%);
+  --neutral-grayish-Blue: hsl(229, 6%, 66%);
+  --neutral-light-Gray: hsl(0, 0%, 98%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--neutral-light-Gray);
+}
+
+header {
+  max-width: 550px;
+  margin: 4rem auto;
+  /* padding: 5rem; */
+  text-align: center;
+  /* background-color: aquamarine; */
+}
+
+header h1 {
+  margin-bottom: 1rem;
+  color: var(--neutral-grayish-Blue);
+  font-weight: 200;
+}
+
+header h1 span {
+  color: var(--neutral-blue);
+  font-weight: 600;
+}
+
+header p {
+  color: var(--neutral-grayish-Blue);
+  /* font-size: 1rem; */
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.container .box {
+  background-color: white;
+  margin: 1rem;
+  padding: 2rem;
+  max-width: 380px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.05);
+  border-radius: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.box::after {
+  content: "";
+  /* background: var(--primary-cyan); */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0.3rem;
+}
+
+.box-cyan::after {
+  background-color: var(--primary-cyan);
+}
+.box-red::after {
+  background-color: var(--primary-red);
+}
+.box-blue::after {
+  background-color: var(--primary-blue);
+}
+.box-orange::after {
+  background-color: var(--primary-orange);
+}
+
+.box h3 {
+  margin-bottom: 1rem;
+  color: var(--neutral-blue);
+}
+
+.box p {
+  margin-bottom: 3rem;
+  color: var(--neutral-grayish-Blue);
+  font-size: 15px;
+}
+
+.box img {
+  display: block;
+  margin-left: auto;
+}
+
+.box.position {
+  transform: translateY(50%);
+}
+
+footer {
+  margin: 4rem 0;
+  text-align: center;
+}
+
+@media only screen and (max-width: 480px) {
+  /* your CSS here */
+  html {
+    padding: 0 1rem;
+    /* font-size: 55%; */
+  }
+
+  body {
+    /* max-width: 400px; */
+    font-size: 80%;
+  }
+  .box p {
+    font-size: 90%;
+  }
+}
+
+@media only screen and (max-width: 824px) {
+  .box.position {
+    transform: translateY(0);
+  }
+}
