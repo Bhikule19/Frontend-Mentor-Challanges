@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-cyan: hsl(158, 36%, 37%);
+  --primary-cream: hsl(30, 38%, 92%);
+
+  --neutral-darkblue: hsl(212, 21%, 14%);
+  --neutral-grayishblue: hsl(228, 12%, 48%);
+  --neutral-white: hsl(0, 0%, 100%);
+
+  --ff-fraunces: "Fraunces", serif;
+  --ff-montserrat: "Montserrat", sans-serif;
+
+  --fs-s: 500;
+  --fs-l: 700;
+}
+
+body {
+  font-family: var(--ff-montserrat);
+  background-color: var(--primary-cream);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  /* margin: 2rem auto; */
+  padding: 1.5rem 1rem;
+}
+
+.grid {
+  max-width: 700px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--neutral-white);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.img img {
+  max-width: 100%;
+  display: inherit;
+}
+
+.content {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: space-between;
+}
+
+.content h6 {
+  color: var(--neutral-grayishblue);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.content h2 {
+  font-family: var(--ff-fraunces);
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  color: var(--neutral-darkblue);
+}
+
+.content p {
+  color: var(--neutral-grayishblue);
+  line-height: 1.5rem;
+}
+
+.price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.price .newprice {
+  color: var(--primary-cyan);
+  font-family: var(--ff-fraunces);
+  font-size: 2rem;
+  padding-right: 1rem;
+}
+
+.price .oldprice {
+  color: var(--neutral-grayishblue);
+  font-weight: 500;
+}
+
+.cta {
+  background-color: var(--primary-cyan);
+  padding: 1rem 0;
+  color: var(--neutral-white);
+  border-radius: 0.5rem;
+  border: none;
+  text-transform: none;
+  font-size: 1rem;
+  font-family: var(--ff-montserrat);
+  width: 100%;
+}
+
+.cta i {
+  padding-right: 0.5rem;
+}
+
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 90%;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .img img {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+  }
+  .content {
+    display: block;
+  }
+
+  h6,
+  h2,
+  p,
+  .price {
+    padding-bottom: 2rem;
+  }
+}
