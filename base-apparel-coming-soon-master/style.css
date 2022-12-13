@@ -133,7 +133,7 @@ button {
   border-radius: 25px;
   cursor: pointer;
   transition: opacity 0.2s ease;
-  height: 50px;
+  height: 52px;
 }
 
 button:hover {
@@ -143,8 +143,8 @@ button:hover {
 .error-icon {
   display: none;
   position: absolute;
-  top: 0.5rem;
-  right: 5.5rem;
+  top: 0.8rem;
+  right: 6rem;
 }
 
 form.error .error-icon {
