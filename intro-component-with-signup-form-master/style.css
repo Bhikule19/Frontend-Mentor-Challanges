@@ -21,7 +21,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-image: url(/images/bg-intro-desktop.png);
+  background-image: url(./images/bg-intro-desktop.png);
   background-size: cover;
   background-color: var(--red);
   color: white;
@@ -178,9 +178,14 @@ button:active {
   text-decoration: none;
 }
 
+a:hover {
+  color: var(--dark-blue);
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 768px) {
   body {
-    background-image: url(/images/bg-intro-mobile.png);
+    background-image: url(./images/bg-intro-mobile.png);
   }
   .container {
     margin-top: 4rem;
