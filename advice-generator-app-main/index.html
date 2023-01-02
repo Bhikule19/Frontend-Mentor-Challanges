@@ -21,8 +21,28 @@
     <title>Frontend Mentor | Advice generator app</title>
   </head>
   <body>
-    Advice #<!-- Advice ID goes here -->
-
-    "<!-- Advice text goes here -->"
+    <div class="card" id="card">
+      <p class="title">Advice # <span id="adviceID"></span></p>
+      <div class="advice" id="adviceText"></div>
+      <!-- <img
+        src="/images/pattern-divider-desktop.svg"
+        alt="divider pattern svg"
+        class="divider"
+      /> -->
+      <picture>
+        <source
+          media="(max-width: 450px)"
+          srcset="/images/pattern-divider-mobile.svg"
+        />
+        <img
+          src="/images/pattern-divider-desktop.svg"
+          alt="divider pattern svg"
+          class="divider"
+        />
+      </picture>
+      <button id="btn" class="btn">
+        <img src="/images/icon-dice.svg" alt="Click here to generate Advice" />
+      </button>
+    </div>
   </body>
 </html>
